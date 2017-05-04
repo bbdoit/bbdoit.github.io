@@ -6,50 +6,56 @@
   var config = {
     categories: [
       { name: "meeting booking", commands: [
-        { key: 'att', name: 'at&t telepresence', url: 'https://telepresencemeeting.att.com', search: '/search/' },
-        { key: 'sfb', name: 'skype for business', url: 'https://webpoolbl20a23.infra.lync.com/Scheduler', search: '/search/' },
-        { key: 'wbx', name: 'webex', url: 'https://bbdo.webex.com', search: '/courses/search/?q=' },
-        { key: 'cncr', name: 'concur travel booking', url: 'https://www.concursolutions.com/home.asp', search: '/courses/search/?q=' },
+        { key: 'att', name: 'AT&T Telepresence', url: 'https://telepresencemeeting.att.com', search: '/search/' },
+        { key: 'sfb', name: 'Skype for Business', url: 'https://webpoolbl20a23.infra.lync.com/Scheduler', search: '/search/' },
+        { key: 'wbx', name: 'Webex', url: 'https://bbdo.webex.com', search: '/courses/search/?q=' },
+        { key: 'ctb', name: 'Concur Travel Booking', url: 'https://www.concursolutions.com/home.asp', search: '/courses/search/?q=' },
       ] },
-      { name: "tools", commands: [
-        { key: 'owa', name: 'outlook', url: 'https://outlook.office.com/owa/?realm=addomain.org', search: '&path=/mail/search' },
-        { key: 'tfr', name: 'bbdo transfer', url: 'https://transfer.bbdo.com/', search: '/search?q=' },
-        { key: 'wtfr', name: 'wetransfer', url: 'https://wetransfer.com/', search: '/search?q=' },
-        { key: 'cnct', name: 'bbdo connect', url: 'https://connect.bbdo.com/', search: '/search?q=' },
-        { key: 'oa', name: 'oasys', url: 'https://omcoasys.com/', search: '/search?q=' },
-        { key: 'sp', name: 'paige service portal', url: 'https://omcpaige.service-now.com/sp', search: '/search?q=' },
-        { key: 'srpt', name: 'bbdo sharepoint', url: 'https://sharepoint.bbdo.com/sites/Agency/nyitdesktop/_layouts/15/start.aspx#/', search: '/search?q=' },
-        { key: 'dejm', name: 'down for everyone or just me?', url: 'http://downforeveryoneorjustme.com/', search: '/search?q=' },
-        { key: 'vx86', name: 'virtual x86', url: 'http://copy.sh/v86/', search: '/search?q=' },
+      { name: "common sites", commands: [
+        { key: 'owa', name: 'Outlook Web App', url: 'https://outlook.office.com/owa/?realm=addomain.org', search: '&path=/mail/search' },
+        { key: 'tfr', name: 'BBDO Transfer', url: 'https://transfer.bbdo.com/', search: '/search?q=' },
+        { key: 'cnct', name: 'BBDO Connect', url: 'https://connect.bbdo.com/', search: '/search?q=' },
+        { key: 'oa', name: 'Oasys', url: 'https://omcoasys.com/', search: '/search?q=' },
+      ] },
+      { name: "knowledge", commands: [
+        { key: 'sp', name: 'Paige Service Portal', url: 'https://omcpaige.service-now.com/sp', search: '/search?q=' },
+        { key: 'srpt', name: 'BBDO Sharepoint', url: 'https://sharepoint.bbdo.com/sites/Agency/nyitdesktop/_layouts/15/start.aspx#/', search: '/search?q=' },
+        { key: 'stex', name: 'Stack Exchange', url: 'https://stackexchange.com/', search: '/search?q=' },
       ] },
       { name: "portals", commands: [
-        { key: 'p', name: 'paige', url: 'https://omcpaige.service-now.com/nav_to.do?uri=%2Fhome.do%3F', search: '/search?q=' },
-        { key: 'jss', name: 'jss', url: 'https://jss.bbdo.com:8443/index.html', search: '/search?q=' },
-        { key: 'sav', name: 'sophos anti-virus', url: 'https://central.sophos.com/manage/dashboard', search: '/search?q=' },
-        { key: 'wbad', name: 'webex admin', url: 'https://bbdo.webex.com/wbxadmin/default.do?siteurl=bbdo', search: '/search?q=' },
-        { key: 'utc', name: 'universal type server', url: 'http://it14wna:8080/', search: '/search?q=' },
-        { key: 'dds', name: 'absolute dds/computrace', url: 'https://cc.absolute.com/Pages/Home.aspx', search: '/search?q=' },
-        { key: 'jll', name: 'facilities', url: 'https://jll-omnicom.corrigo.com/Customer/Login.aspx', search: '/search?q=' },
+        { key: 'p', name: 'Paige', url: 'https://omcpaige.service-now.com/nav_to.do?uri=%2Fhome.do%3F', search: '/search?q=' },
+        { key: 'jss', name: 'Casper JSS', url: 'https://jss.bbdo.com:8443/index.html', search: '/search?q=' },
+        { key: 'sav', name: 'Sophos Anti-Virus', url: 'https://central.sophos.com/manage/dashboard', search: '/search?q=' },
+        { key: 'wbad', name: 'Webex Admin', url: 'https://bbdo.webex.com/wbxadmin/default.do?siteurl=bbdo', search: '/search?q=' },
+        { key: 'utc', name: 'Universal Type Server', url: 'http://it14wna:8080/', search: '/search?q=' },
+        { key: 'dds', name: 'Absolute DDS/Computrace', url: 'https://cc.absolute.com/Pages/Home.aspx', search: '/search?q=' },
+        { key: 'jll', name: 'Facilities', url: 'https://jll-omnicom.corrigo.com/Customer/Login.aspx', search: '/search?q=' },
+        { key: 'tmvr', name: 'Teamviewer', url: 'https://login.teamviewer.com/', search: '/search?q=' },
+      ] },
+      { name: "other tools", commands: [
+        { key: 'dejm', name: 'Down for Everyone or Just Me?', url: 'http://downforeveryoneorjustme.com/', search: '/search?q=' },
+        { key: 'vx86', name: 'Virtual x86', url: 'http://copy.sh/v86/', search: '/search?q=' },
+        { key: 'wtfr', name: 'WeTransfer', url: 'https://wetransfer.com/', search: '/search?q=' },
       ] },
       { name: "benefits", commands: [
-        { key: 'hr', name: 'general hr portal', url: 'https://www3.essbenefits.com/OMNICOM/', search: '/search/' },
-        { key: 'lgl', name: 'hyatt legal plans', url: 'https://members.legalplans.com/Home/', search: '/search/' },
-        { key: 'cgn', name: 'cigna', url: 'https://my.cigna.com/web/public/guest', search: '/search/' },
-        { key: 'bens', name: 'health and welfare benefits', url: 'https://ibenefitcenter2.mercerhrs.com/OMNI07/Login.tpz?ReturnURL=https%3a%2f%2fibenefitcenter2.mercerhrs.com%2fOMNI07%2fHealthLanding.tpz', search: '/search/' },
-        { key: 'fdl', name: 'fidelity 401k plans', url: 'https://nb.fidelity.com/public/nb/default/home', search: '/search/' },
-        { key: 'adp', name: 'adp portal', url: 'https://my.adp.com/static/redbox/login.html', search: '/search/' },
+        { key: 'hr', name: 'General HR Portal', url: 'https://www3.essbenefits.com/OMNICOM/', search: '/search/' },
+        { key: 'lgl', name: 'Hyatt Legal Plans', url: 'https://members.legalplans.com/Home/', search: '/search/' },
+        { key: 'cgn', name: 'Cigna', url: 'https://my.cigna.com/web/public/guest', search: '/search/' },
+        { key: 'bens', name: 'Health and Welfare Benefits', url: 'https://ibenefitcenter2.mercerhrs.com/OMNI07/Login.tpz?ReturnURL=https%3a%2f%2fibenefitcenter2.mercerhrs.com%2fOMNI07%2fHealthLanding.tpz', search: '/search/' },
+        { key: 'fdl', name: 'Fidelity 401K Plans', url: 'https://nb.fidelity.com/public/nb/default/home', search: '/search/' },
+        { key: 'adp', name: 'ADP Portal', url: 'https://my.adp.com/static/redbox/login.html', search: '/search/' },
       ] },
       { name: "radio", commands: [
-        { key: 'rg', name: 'radio.garden', url: 'http://radio.garden/', search: '/search?q=' },
-        { key: 'lr', name: 'the lot radio', url: 'http://www.thelotradio.com/', search: '/search/' },
-        { key: 'r', name: 'rinse.fm', url: 'http://rinse.fm/player/', search: '/search/' },
-        { key: 'rr', name: 'radar radio', url: 'http://www.radarradio.com/', search: '/?s=' },
-        { key: 'bar', name: 'bel-air radio', url: 'http://www.bel-air.org/#/', search: '/?s=' },
-        { key: 'sc', name: 'soundcloud', url: 'https://soundcloud.com/stream', search: '/search?q=' },
-        { key: 's', name: 'spotify', url: 'https://play.spotify.com/browse', search: '/search/' },
-        { key: 'mc', name: 'mixcloud', url: 'https://www.mixcloud.com/', search: '/search/' },
-        { key: 'swr', name: 'shortwave radio', url: 'http://websdr.ewi.utwente.nl:8901/', search: '/search/' },
-        { key: 'pan', name: 'pandora', url: 'http://www.pandora.com/', search: '/search/' },
+        { key: 'rg', name: 'Radio.Garden', url: 'http://radio.garden/', search: '/search?q=' },
+        { key: 'lr', name: 'The Lot Radio', url: 'http://www.thelotradio.com/', search: '/search/' },
+        { key: 'r', name: 'Rinse.fm', url: 'http://rinse.fm/player/', search: '/search/' },
+        { key: 'rr', name: 'Radar Radio', url: 'http://www.radarradio.com/', search: '/?s=' },
+        { key: 'bar', name: 'Bel-Air Radio', url: 'http://www.bel-air.org/#/', search: '/?s=' },
+        { key: 'sc', name: 'SoundCloud', url: 'https://soundcloud.com/stream', search: '/search?q=' },
+        { key: 's', name: 'Spotify', url: 'https://play.spotify.com/browse', search: '/search/' },
+        { key: 'mc', name: 'MixCloud', url: 'https://www.mixcloud.com/', search: '/search/' },
+        { key: 'swr', name: 'Shortwave Radio', url: 'http://websdr.ewi.utwente.nl:8901/', search: '/search/' },
+        { key: 'pan', name: 'Pandora', url: 'http://www.pandora.com/', search: '/search/' },
       ] },
     ],
 
@@ -277,7 +283,7 @@
 
 <main>
   <time id="js-clock" style="font-family:lato;"></time>
-  <h1 style="font-family:lato;">bbdo it omniportal</h1>
+  <h1 style="font-family:lato;">BBDO IT OmniPortal</h1>
   <form id="js-search-form" autocomplete="off">
     <input id="js-search-input" class="search-input" type="text" autofocus>
     <ul id="js-search-suggestions" class="search-suggestions"></ul>
