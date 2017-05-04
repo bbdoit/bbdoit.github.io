@@ -6,10 +6,37 @@
   var config = {
     categories: [
       { name: "meeting booking", commands: [
-        { key: 'att', name: 'AT&T Telepresence', url: 'https://telepresencemeeting.att.com', search: '/search/' },
+        { key: 'att', name: 'at&t telepresence', url: 'https://telepresencemeeting.att.com', search: '/search/' },
         { key: 'sfb', name: 'skype for business', url: 'https://webpoolbl20a23.infra.lync.com/Scheduler', search: '/search/' },
         { key: 'wbx', name: 'webex', url: 'https://bbdo.webex.com', search: '/courses/search/?q=' },
         { key: 'cncr', name: 'concur travel booking', url: 'https://www.concursolutions.com/home.asp', search: '/courses/search/?q=' },
+      ] },
+      { name: "tools", commands: [
+        { key: 'owa', name: 'outlook', url: 'https://outlook.office.com/owa/?realm=addomain.org', search: '&path=/mail/search' },
+        { key: 'tfr', name: 'bbdo transfer', url: 'https://transfer.bbdo.com/', search: '/search?q=' },
+        { key: 'wtfr', name: 'wetransfer', url: 'https://wetransfer.com/', search: '/search?q=' },
+        { key: 'cnct', name: 'bbdo connect', url: 'https://connect.bbdo.com/', search: '/search?q=' },
+        { key: 'oa', name: 'oasys', url: 'https://omcoasys.com/', search: '/search?q=' },
+        { key: 'sp', name: 'paige service portal', url: 'https://omcpaige.service-now.com/sp', search: '/search?q=' },
+        { key: 'srpt', name: 'bbdo sharepoint', url: 'https://sharepoint.bbdo.com/sites/Agency/nyitdesktop/_layouts/15/start.aspx#/', search: '/search?q=' },
+        { key: 'dejm', name: 'down for everyone or just me?', url: 'http://downforeveryoneorjustme.com/', search: '/search?q=' },
+        { key: 'vx86', name: 'virtual x86', url: 'http://copy.sh/v86/', search: '/search?q=' },
+      ] },
+      { name: "portals", commands: [
+        { key: 'p', name: 'paige', url: 'https://omcpaige.service-now.com/nav_to.do?uri=%2Fhome.do%3F', search: '/search?q=' },
+        { key: 'jss', name: 'jss', url: 'https://jss.bbdo.com:8443/index.html', search: '/search?q=' },
+        { key: 'sav', name: 'sophos anti-virus', url: 'https://central.sophos.com/manage/dashboard', search: '/search?q=' },
+        { key: 'wbad', name: 'webex admin', url: 'https://bbdo.webex.com/wbxadmin/default.do?siteurl=bbdo', search: '/search?q=' },
+        { key: 'utc', name: 'universal type server', url: 'http://it14wna:8080/', search: '/search?q=' },
+        { key: 'dds', name: 'absolute dds/computrace', url: 'https://cc.absolute.com/Pages/Home.aspx', search: '/search?q=' },
+        { key: 'jll', name: 'facilities', url: 'https://jll-omnicom.corrigo.com/Customer/Login.aspx', search: '/search?q=' },
+      ] },
+      { name: "benefits", commands: [
+        { key: 'lgl', name: 'hyatt legal plans', url: 'https://members.legalplans.com/Home/', search: '/search/' },
+        { key: 'cgn', name: 'cigna', url: 'https://my.cigna.com/web/public/guest', search: '/search/' },
+        { key: 'bens', name: 'health and welfare benefits', url: 'https://ibenefitcenter2.mercerhrs.com/OMNI07/Login.tpz?ReturnURL=https%3a%2f%2fibenefitcenter2.mercerhrs.com%2fOMNI07%2fHealthLanding.tpz', search: '/search/' },
+        { key: 'fdl', name: 'fidelity 401k plans', url: 'https://nb.fidelity.com/public/nb/default/home', search: '/search/' },
+        { key: 'adp', name: 'adp portal', url: 'https://my.adp.com/static/redbox/login.html', search: '/search/' },
       ] },
       { name: "radio", commands: [
         { key: 'rg', name: 'radio.garden', url: 'http://radio.garden/', search: '/search?q=' },
@@ -22,30 +49,6 @@
         { key: 'mc', name: 'mixcloud', url: 'https://www.mixcloud.com/', search: '/search/' },
         { key: 'swr', name: 'shortwave radio', url: 'http://websdr.ewi.utwente.nl:8901/', search: '/search/' },
         { key: 'pan', name: 'pandora', url: 'http://www.pandora.com/', search: '/search/' },
-      ] },
-      { name: "tools", commands: [
-        { key: 'owa', name: 'outlook', url: 'https://outlook.office.com/owa/?realm=addomain.org', search: '&path=/mail/search' },
-        { key: 'tfr', name: 'bbdo transfer', url: 'https://transfer.bbdo.com/', search: '/search?q=' },
-        { key: 'cnct', name: 'bbdo connect', url: 'https://connect.bbdo.com/', search: '/search?q=' },
-        { key: 'oa', name: 'oasys', url: 'https://omcoasys.com/', search: '/search?q=' },
-        { key: 'sp', name: 'paige service portal', url: 'https://omcpaige.service-now.com/sp', search: '/search?q=' },
-        { key: 'srpt', name: 'bbdo sharepoint', url: 'https://sharepoint.bbdo.com/sites/Agency/nyitdesktop/_layouts/15/start.aspx#/', search: '/search?q=' },
-      ] },
-      { name: "portals", commands: [
-        { key: 'p', name: 'paige', url: 'https://omcpaige.service-now.com/nav_to.do?uri=%2Fhome.do%3F', search: '/search?q=' },
-        { key: 'jss', name: 'jss', url: 'https://jss.bbdo.com:8443/index.html', search: '/search?q=' },
-        { key: 'sav', name: 'sophos anti-virus', url: 'https://central.sophos.com/manage/dashboard', search: '/search?q=' },
-        { key: 'wbxadm', name: 'webex admin', url: 'https://bbdo.webex.com/wbxadmin/default.do?siteurl=bbdo', search: '/search?q=' },
-        { key: 'utc', name: 'universal type server', url: 'http://it14wna:8080/', search: '/search?q=' },
-        { key: 'dds', name: 'absolute dds/computrace', url: 'https://cc.absolute.com/Pages/Home.aspx', search: '/search?q=' },
-        { key: 'jll', name: 'facilities', url: 'https://jll-omnicom.corrigo.com/Customer/Login.aspx', search: '/search?q=' },
-      ] },
-      { name: "benefits", commands: [
-        { key: 'lgl', name: 'hyatt legal plans', url: 'https://members.legalplans.com/Home/', search: '/search/' },
-        { key: 'cgn', name: 'cigna', url: 'https://my.cigna.com/web/public/guest', search: '/search/' },
-        { key: 'bens', name: 'health and welfare benefits', url: 'https://ibenefitcenter2.mercerhrs.com/OMNI07/Login.tpz?ReturnURL=https%3a%2f%2fibenefitcenter2.mercerhrs.com%2fOMNI07%2fHealthLanding.tpz', search: '/search/' },
-        { key: 'fdl', name: 'fidelity 401k plans', url: 'https://nb.fidelity.com/public/nb/default/home', search: '/search/' },
-        { key: 'adp', name: 'adp portal', url: 'https://my.adp.com/static/redbox/login.html', search: '/search/' },
       ] },
     ],
 
@@ -272,7 +275,7 @@
 </style>
 
 <main>
-  <h1>bbdo it omniportal</h1>
+  <h1 style="font-family:verdana;">bbdo it omniportal</h1>
   <time id="js-clock"></time>
   <form id="js-search-form" autocomplete="off">
     <input id="js-search-input" class="search-input" type="text" autofocus>
